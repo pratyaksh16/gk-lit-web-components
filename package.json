@@ -1,0 +1,33 @@
+{
+  "name": "gk-lit-web-components",
+  "private": false,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@lit-labs/motion": "^1.0.8",
+    "lit": "^3.3.0"
+  },
+  "devDependencies": {
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  },
+  "keywords": [
+    "web-components",
+    "lit",
+    "banner-slider",
+    "motion-carousel"
+  ],
+  "author": "",
+  "license": "MIT"
+}
