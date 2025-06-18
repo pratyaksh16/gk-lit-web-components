@@ -12,8 +12,19 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pratyaksh16/gk-lit-web-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pratyaksh16/gk-lit-web-components/issues"
+  },
+  "homepage": "https://github.com/pratyaksh16/gk-lit-web-components#readme",
   "dependencies": {
     "@lit-labs/motion": "^1.0.8",
     "lit": "^3.3.0"
@@ -28,6 +39,9 @@
     "banner-slider",
     "motion-carousel"
   ],
-  "author": "",
-  "license": "MIT"
+  "author": "Pratyaksh <imaginatorypratyaksh@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
 }

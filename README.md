@@ -1,50 +1,6 @@
 # GK Lit Web Components
 
-A collection of reusable web components built with Lit.
-
-## Components
-
-### Banner Slider
-
-A responsive banner slider component with support for desktop and mobile images.
-
-```html
-<banner-slider
-  .sliders=${[
-    {
-      bannerImageUrl: "path/to/image.jpg",
-      mobileBannerImageUrl: "path/to/mobile-image.jpg",
-      id: 1,
-      title: "My Banner"
-    }
-  ]}
-></banner-slider>
-```
-
-#### Properties
-
-- `sliders`: Array of slider objects with properties:
-  - `bannerImageUrl`: URL for desktop image
-  - `mobileBannerImageUrl`: URL for mobile image
-  - `id`: Unique identifier
-  - `targetUrl`: Optional link URL
-  - `title`: Optional title
-  - `showWaterMark`: Optional boolean for watermark
-  - `alt`: Optional alt text
-- `showTrustMarkers`: Boolean
-- `isMarketing`: Boolean
-
-### Motion Carousel
-
-An animated carousel component with smooth transitions.
-
-```html
-<motion-carousel selected="2"></motion-carousel>
-```
-
-#### Properties
-
-- `selected`: Number (defaults to 0)
+A collection of reusable web components built with Lit for Nuxt.js applications.
 
 ## Installation
 
@@ -54,15 +10,45 @@ npm install gk-lit-web-components
 
 ## Usage
 
-```javascript
-// Import the components
-import 'gk-lit-web-components';
+Import and use the components in your Nuxt.js application:
 
-// Use in your HTML
-<banner-slider></banner-slider>
-<motion-carousel></motion-carousel>
+```javascript
+import { BannerSlider, MotionCarousel } from "gk-lit-web-components";
+
+// Register the components
+customElements.define("banner-slider", BannerSlider);
+customElements.define("motion-carousel", MotionCarousel);
+```
+
+Then use them in your templates:
+
+```html
+<banner-slider></banner-slider> <motion-carousel></motion-carousel>
+```
+
+## Components
+
+### Banner Slider
+
+A customizable banner slider component with smooth transitions.
+
+### Motion Carousel
+
+A motion-based carousel component with advanced animations.
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
 ```
 
 ## License
 
-MIT
+MIT © Pratyaksh
